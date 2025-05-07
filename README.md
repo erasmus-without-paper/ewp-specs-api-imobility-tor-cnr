@@ -16,6 +16,13 @@ Mobility ToRs API][imobility-tors-api]) are changed.
 CNR stands for Change Notification Receiver. For a detailed introduction on how
 CNR APIs work, please read [this page][cnr-intro].
 
+If HEI provides any API from the following group:
+* Incoming Mobilities ToRs
+* Incoming Mobilities ToRs CNR
+* Incoming Mobilities ToRs Stats
+
+it MUST provide all APIs from this group.
+
 
 Reminder on vocabulary
 ----------------------
