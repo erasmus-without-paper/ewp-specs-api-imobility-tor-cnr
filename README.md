@@ -16,6 +16,13 @@ Mobility ToRs API][imobility-tors-api]) are changed.
 CNR stands for Change Notification Receiver. For a detailed introduction on how
 CNR APIs work, please read [this page][cnr-intro].
 
+If HEI provides any API from the following group:
+* Incoming Mobilities ToRs
+* Incoming Mobilities ToRs CNR
+* Incoming Mobilities ToRs Stats
+
+it MUST provide all APIs from this group.
+
 
 Reminder on vocabulary
 ----------------------
@@ -46,12 +53,6 @@ Request parameters
 ------------------
 
 Parameters MUST be provided in the `application/x-www-form-urlencoded` format.
-
-
-### `receiving_hei_id` (required)
-
-Identifier of the receiving HEI - the master of the Transcript of Records
-which just have been changed.
 
 
 ### `omobility_id` (repeatable, required)
@@ -105,13 +106,10 @@ Safety measures
 
 It is NOT guaranteed that all notifications will be delivered to you promptly.
 Some notifications may also **not reach you at all**, e.g. due to
-implementation errors on the caller's server, or the fact that no
-Notification Sender daemon has been implemented there (see
-`<sends-notifications>` element in [Incoming Mobility ToRs
-API][imobility-tors-api]'s `manifest-entry.xsd`).
+implementation errors on the caller's server.
 
-Therefore, you SHOULD periodically verify if your copies are up-to-date (or,
-simply, choose to *not store* these copies). Proper caching techniques and/or
+Therefore, you SHOULD periodically verify if your copies are up-to-date (or
+choose to *not store* these copies). Proper caching techniques and/or
 periodical use of `index` endpoint of [Incoming Mobility ToRs
 API][imobility-tors-api] can help you with that.
 
